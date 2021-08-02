@@ -3,3 +3,28 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: darkgray;
+
+}
+
+.container {
+  
+  width: 400px;
+  height: 700px;
+  background-image: url(../images/waterrainglass1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(1px);
+  opacity: .9;
+
+  
+  
+
+
+}
