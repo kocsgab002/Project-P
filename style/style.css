@@ -1,61 +1,76 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background:dodgerblue;
-
+  background: dodgerblue;
 }
-
 .container {
-  
-  width: 400px;
-  height: 700px;
-  background-image: url(../images/waterrainglass1.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter:blur(0px);
-  display: flex;
-  justify-content: center;
-  
-}
-.head {
   display: flex;
   flex-direction: column;
   align-items: center;
-  backdrop-filter: blur(3px);
-  padding-top: 30px;
-  color: floralwhite;
-  width: 70%;
-  height: 60%;
-  margin-top: 20px;
-  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.1);
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
-
-
+  width: 33%;
+  height: 100vh;
+  border: 2px solid black;
+  color: azure;
 }
-p.city {
-font-size: 30px;
-padding: 20px;
-
+.container .head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px;
 }
-p.temperatures {
-  font-size: 90px;
-  
-  }
-  span {
-    font-size: 70px;
-  }
+.container .head .city {
+  font-size: 3rem;
+  align-items: center;
+}
+.container .head .temperatures {
+  font-size: 7rem;
+  font-weight: bold;
+}
+.container .head .clouds {
+  font-size: 1.5rem;
+}
+.container .head i {
+  font-size: 5rem;
+}
+
+.container .secdata {
+  display: flex;
+  flex-direction: row;
+  font-size: 3rem;
+}
+
+.container .secdata .minmaxtemp {
+  padding: 30px;
+}
+
+.container .secdata .humpress {
+  padding: 30px;
+  text-align: end;
+}
+.container .secdata span {
+  font-size: 2rem;
+}
+
+.container .thirddata {
+  display: flex;
+  flex-direction: row;
+  font-size: 3rem;
+}
+.container .thirddata .sunmove {
+  padding: 30px;
+}
+
+.container .thirddata .moon {
+  padding: 30px;
+}
+
