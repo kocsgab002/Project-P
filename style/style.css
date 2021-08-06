@@ -13,7 +13,21 @@ body {
   min-height: 100vh;
   background: dodgerblue;
 }
+.container::before {
+  position: absolute;
+  content: '';
+  min-height: 100vh;
+  width: 100%;
+  background: url('../images/waterrainglass1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(1px);
+  z-index: -1;
+
+}
 .container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,6 +35,9 @@ body {
   height: 100vh;
   border: 2px solid black;
   color: azure;
+}
+.container p {
+  font-size: 1.3rem;
 }
 .container .head {
   display: flex;
