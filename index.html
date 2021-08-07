@@ -15,7 +15,9 @@
     <div class="container">
         <div class="head">
             <p class="city">Budapest</p>
-            <p id="temp" class="temperatures"><span>&#x2103</span></p>
+            <div class="main_temp">
+                <p id="temp" class="temperatures"></p><span>&#x2103</span>
+            </div>
             <p class="clouds"> Felhős, szeles</p>
             <i class="fas fa-cloud-sun"></i>
         </div>
@@ -50,6 +52,9 @@
         </div>
     </div>
     <script src="main.js"></script>
+    
+    <div id="openweathermap-widget-15"></div>
+<script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 15,cityid: '3054643',appid: 'a3a6e8f3dd3bbd3debaa600a7e2ac7ce',units: 'metric',containerid: 'openweathermap-widget-15',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script>
 </body>
 
 </html>
