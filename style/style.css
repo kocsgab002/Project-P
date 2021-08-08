@@ -48,10 +48,14 @@ body {
   font-size: 2rem;
   align-items: center;
 }
-.main_temp, .mintemp, .maxtemp, .humidity, .pressure {
+.main_temp,
+.mintemp,
+.maxtemp,
+.humidity,
+.pressure {
   display: flex;
   align-items: baseline;
-  justify-content:center;
+  justify-content: center;
 }
 .container .head .temperatures {
   font-size: 7.5rem;

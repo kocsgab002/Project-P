@@ -5,10 +5,11 @@ const weather_url = 'https://api.openweathermap.org/data/2.5/weather?q=Budapest&
 //Elkészítem a 'getWeather' függvényt //
 async function getWeather() {
 
-    const respone = await fetch(weather_url);
-    const data = await respone.json();
+    const respone = await fetch(weather_url); //API beolvasása //
+    const data = await respone.json();         // JSON formátummá alakítás //
     console.log("Adatok feldolgozáshoz:", (data));
 
+    //Városnév beolvasás, kiiratás //
     let city_name = document.getElementById('city_name');
     city_name.innerHTML += (data.name)
 
@@ -44,6 +45,13 @@ async function getWeather() {
     let timestr = date.toLocaleTimeString();
     let sunrise = document.getElementById('sunrise');
     sunrise.innerHTML += timestr;
+
+    //Napnyugta kiitarása//
+    let sec2 = data.sys.sunset;
+    let date2 = new Date(sec2 * 1000);
+    let timestr2 = date2.toLocaleTimeString();
+    let sunset = document.getElementById('sunset');
+    sunset.innerHTML += timestr2;
 
 
 };
