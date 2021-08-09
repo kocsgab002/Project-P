@@ -7,7 +7,7 @@ async function getWeather() {
 
     const respone = await fetch(weather_url); //API beolvasása //
     const data = await respone.json();         // JSON formátummá alakítás //
-    console.log("Adatok feldolgozáshoz:", (data));
+    //console.log("Adatok feldolgozáshoz:", (data));
 
     //Városnév beolvasás, kiiratás //
     let city_name = document.getElementById('city_name');
@@ -54,6 +54,10 @@ async function getWeather() {
     sunset.innerHTML += timestr2;
 
 
+    let back = document.getElementsByClassName("container");
+    console.log(back);
+
+    document.body.style.background = "#f3f3f3";
 };
 
 //Függvény meghívása //
