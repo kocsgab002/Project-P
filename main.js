@@ -7,7 +7,7 @@ async function getWeather() {
 
     const respone = await fetch(weather_url); //API beolvasása //
     const data = await respone.json();         // JSON formátummá alakítás //
-    //console.log("Adatok feldolgozáshoz:", (data));
+    console.log("Adatok feldolgozáshoz:", (data));
 
     //Városnév beolvasás, kiiratás //
     let city_name = document.getElementById('city_name');
@@ -53,12 +53,16 @@ async function getWeather() {
     let sunset = document.getElementById('sunset');
     sunset.innerHTML += timestr2;
 
+    let container = document.getElementById('container')
+    let id = data.weather[0].id;
+    console.log(id)
+    if (id == 800) {
+        container.classList.add("sunshine");
+    } else {
+            container.classList.add("rainy");
+        }
+    };
 
-    let back = document.getElementsByClassName("container");
-    console.log(back);
-
-    document.body.style.background = "#f3f3f3";
-};
 
 //Függvény meghívása //
 getWeather();

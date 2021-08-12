@@ -13,9 +13,14 @@ body {
   background: dodgerblue;
 }
 
+.rainy {
+  background: url("../images/waterrainglass1.jpg");
+}
+.sunshine {
+  background: url("../images/sunshine.jpg");
+}
 
 .container {
-  background: url("../images/waterrainglass1.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -27,7 +32,7 @@ body {
   width: 60vh;
   color: azure;
   box-shadow: 2px 2px 10px black;
-  text-shadow: 4px 4px 10px  black;
+  text-shadow: 4px 4px 10px black;
 }
 .container p {
   font-size: 1.3rem;
