@@ -15,10 +15,36 @@ body {
 
 .rainy {
   background: url("../images/waterrainglass1.jpg");
+  color: azure;
 }
 .sunshine {
   background: url("../images/sunshine.jpg");
+  color: azure;
 }
+.thunderstorm {
+  background: url("../images/thunderstorm.jpg");
+  color: rgb(255, 255, 255);
+}
+.drizzle {
+  background: url("../images/drizzle.jpg");
+  color: azure;
+}
+.snow {
+  background: url("../images/snow.jpg");
+  color: azure;
+}
+.cloudy {
+  background: url("../images/cloudy.jpg");
+  color: azure;
+}
+.mist {
+  background: url("../images/fog.jpg");
+  color: rgb(255, 255, 255);
+}
+.night {
+  background: url("../images/nignt.jpg");
+} 
+
 
 .container {
   background-position: center;
@@ -30,7 +56,6 @@ body {
   flex-direction: column;
   align-items: center;
   width: 60vh;
-  color: azure;
   box-shadow: 2px 2px 10px black;
   text-shadow: 4px 4px 10px black;
 }

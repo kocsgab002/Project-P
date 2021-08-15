@@ -53,20 +53,36 @@ async function getWeather() {
     let sunset = document.getElementById('sunset');
     sunset.innerHTML += timestr2;
 
+    //Megfeleő background beállítása//
     let container = document.getElementById('container')
     let id = data.weather[0].id;
-    console.log(id)
-    if (id == 800) {
-        container.classList.add("sunshine");
+    if (id > 199 && id < 233) {
+        container.classList.add("thunderstorm");
+    } else if (id > 299 && id < 322) {
+        container.classList.add("drizzle");
+    } else if (id > 499 && id < 532) {
+        container.classList.add("rainy");
+    } else if (id > 599 && id < 623) {
+        container.classList.add("snow");
+    } else if (id > 800 && id < 805) {
+        container.classList.add("cloudy");
+    } else if (id > 700 && id < 782) {
+        container.classList.add("mist");
     } else {
-            container.classList.add("rainy");
-        }
-    };
+        container.classList.add("sunshine");
+    }
 
+//Éjszaja van-e?//
+let time_now = (new Date).toLocaleTimeString();
+console.log(time_now);
+if ( time_now > timestr2) {
+    console.log("éjjel van");
+    container.classList.add("night")
+} else {
+    console.log("nappal van");
+}
+
+}
 
 //Függvény meghívása //
 getWeather();
-
-
-
-
