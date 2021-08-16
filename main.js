@@ -72,15 +72,15 @@ async function getWeather() {
         container.classList.add("sunshine");
     }
 
-//Éjszaja van-e?//
-let time_now = (new Date).toLocaleTimeString();
-console.log(time_now);
-if ( time_now > timestr2) {
-    console.log("éjjel van");
-    container.classList.add("night")
-} else {
-    console.log("nappal van");
-}
+    //Éjszaja van-e?//
+    let time_now = (new Date).toLocaleTimeString();
+    console.log(time_now);
+    if (time_now > timestr2) {
+        console.log("éjjel van");
+        container.classList.add("night")
+    } else {
+        console.log("nappal van");
+    }
 
 }
 
