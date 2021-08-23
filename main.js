@@ -1,12 +1,11 @@
 const myapi = "a3a6e8f3dd3bbd3debaa600a7e2ac7ce"; //saját API ID //
 
-//const weather_url ="https://api.openweathermap.org/data/2.5/onecall?lat=47.580264&lon=19.101505&units=metric&mode=json&lang=hu&appid=a3a6e8f3dd3bbd3debaa600a7e2ac7ce";
-const weather_url =
-  "https://api.openweathermap.org/data/2.5/weather?lat=47.580264&lon=19.101505&units=metric&lang=hu&appid=a3a6e8f3dd3bbd3debaa600a7e2ac7ce"; //API URL //
+const weather_url_extended ="https://api.openweathermap.org/data/2.5/onecall?lat=47.580264&lon=19.101505&units=metric&mode=json&lang=hu&appid=a3a6e8f3dd3bbd3debaa600a7e2ac7ce";
+const weather_url ="https://api.openweathermap.org/data/2.5/weather?lat=47.580264&lon=19.101505&units=metric&lang=hu&appid=a3a6e8f3dd3bbd3debaa600a7e2ac7ce"; //API URL //
 
 //Elkészítem a 'getWeather' függvényt //
 async function getWeather() {
-  const respone = await fetch(weather_url); //API beolvasása //
+  const respone = await fetch(weather_url_extended); //API beolvasása //
   const data = await respone.json(); // JSON formátummá alakítás //
   console.log("Adatok feldolgozáshoz:", data);
 
