@@ -3,9 +3,29 @@ const myapi = "a3a6e8f3dd3bbd3debaa600a7e2ac7ce"; //saját API ID //
 const weather_url_extended ="https://api.openweathermap.org/data/2.5/onecall?lat=47.580264&lon=19.101505&units=metric&mode=json&lang=hu&appid=a3a6e8f3dd3bbd3debaa600a7e2ac7ce";
 const weather_url ="https://api.openweathermap.org/data/2.5/weather?lat=47.580264&lon=19.101505&units=metric&lang=hu&appid=a3a6e8f3dd3bbd3debaa600a7e2ac7ce"; //API URL //
 
+async function moonMove() {
+  const respone_moon = await fetch(weather_url_extended); //API beolvasása //
+  const data_moon = await respone_moon.json(); // JSON formátummá alakítás //
+  console.log("Moon Adatok feldolgozáshoz:", data_moon);
+
+  //Holdkelte kiitarása//
+  let sec_moon = data_moon.daily[0].moonrise;
+  let date_moon = new Date(sec_moon * 1000);
+  let timestr = date_moon.toLocaleTimeString();
+  let moonrise = document.getElementById("moonrise");
+  moonrise.innerHTML += timestr;
+  
+//Holdnyugta kiitarása//
+  let sec_moon2 = data_moon.daily[0].moonset;
+  let date_moon2 = new Date(sec_moon2 * 1000);
+  let timestr2 = date_moon2.toLocaleTimeString();
+  let moonset = document.getElementById("moonset");
+  moonset.innerHTML += timestr2;
+}
+
 //Elkészítem a 'getWeather' függvényt //
 async function getWeather() {
-  const respone = await fetch(weather_url_extended); //API beolvasása //
+  const respone = await fetch(weather_url); //API beolvasása //
   const data = await respone.json(); // JSON formátummá alakítás //
   console.log("Adatok feldolgozáshoz:", data);
 
@@ -82,3 +102,4 @@ async function getWeather() {
 
 //Függvény meghívása //
 getWeather();
+moonMove();
