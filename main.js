@@ -75,28 +75,37 @@ async function getWeather() {
 
   //Megfeleő background beállítása//
   let container = document.getElementById("container");
+  let icons = document.getElementById("icons");
   let id = data.weather[0].id;
   if (id > 199 && id < 233) {
     container.classList.add("thunderstorm");
+    icons.classList.add("fa-bolt")
   } else if (id > 299 && id < 322) {
     container.classList.add("drizzle");
+    icons.classList.add("fa-cloud-showers-heavy");
   } else if (id > 499 && id < 532) {
     container.classList.add("rainy");
+    icons.classList.add("fa-cloud-showers-heavy");
   } else if (id > 599 && id < 623) {
     container.classList.add("snow");
+    icons.classList.add("fa-snowflake");
   } else if (id > 800 && id < 805) {
     container.classList.add("cloudy");
+    icons.classList.add("fa-cloud");
   } else if (id > 700 && id < 782) {
     container.classList.add("mist");
+    icons.classList.add("fa-smog");
   } else {
     container.classList.add("sunshine");
+    icons.classList.add("fa-sun");
   }
 
   //Éjszaja van-e?//
   let time_now = new Date().getTime();
-  if (date2.getTime() > new Date().getTime()) {
-  } else {
+  if (date2.getTime() < new Date().getTime()) {
     container.classList.add("night");
+  } else {
+    
   }
 }
 
