@@ -41,37 +41,37 @@ async function getWeather() {
   let clouds = document.getElementById("clouds");
   let szoveg = data.weather[0].description; //Kiválasztom a tömb 0. sorának 'description' elemét //
   let szoveg_nagybetus = szoveg.charAt(0).toUpperCase() + szoveg.slice(1); // Szöveg eleje nagybetű //
-  clouds.innerHTML += szoveg_nagybetus; //Szöveges időjárás kiírása //
+  clouds.innerHTML = szoveg_nagybetus; //Szöveges időjárás kiírása //
 
   //Min.Hőm. kiiratása//
   let mintemp = document.getElementById("mintemp");
-  mintemp.innerHTML += Math.round(data.main.temp_min * 10) / 10;
+  mintemp.innerHTML = Math.round(data.main.temp_min * 10) / 10;
 
   //Max.Hőm. kiiratása//
   let maxtemp = document.getElementById("maxtemp");
-  maxtemp.innerHTML += Math.round(data.main.temp_max * 10) / 10;
+  maxtemp.innerHTML = Math.round(data.main.temp_max * 10) / 10;
 
   //Páratartalom kiiratása//
   let humidity = document.getElementById("humidity");
-  humidity.innerHTML += data.main.humidity;
+  humidity.innerHTML = data.main.humidity;
 
   //Légnyomás kiiratása//
   let pressure = document.getElementById("pressure");
-  pressure.innerHTML += data.main.pressure;
+  pressure.innerHTML = data.main.pressure;
 
   //Napkelte kiitarása//
   let sec = data.sys.sunrise;
   let date = new Date(sec * 1000);
   let timestr = date.toLocaleTimeString();
   let sunrise = document.getElementById("sunrise");
-  sunrise.innerHTML += timestr;
+  sunrise.innerHTML = timestr;
 
   //Napnyugta kiitarása//
   let sec2 = data.sys.sunset;
   let date2 = new Date(sec2 * 1000);
   let timestr2 = date2.toLocaleTimeString();
   let sunset = document.getElementById("sunset");
-  sunset.innerHTML += timestr2;
+  sunset.innerHTML = timestr2;
 
   //Megfeleő background beállítása//
   let container = document.getElementById("container");
