@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/76928e385a.js" crossorigin="anonymous"></script>
+    <title>weather Box</title>
+</head>
+
+<body>
+    <div id="container" class="container">
+        <div class="head">
+            <p id="city_name" class="city"></p>
+            <div class="main_temp">
+                <p id="temp" class="temperatures"></p><span>&#x2103</span>
+            </div>
+            <p id="clouds" class="clouds"></p>
+            <i id="icons" class="fas"></i>
+        </div>
+        <div class="secdata">
+            <div class="minmaxtemp">
+                <p>Min. Hőm.</p>
+                <div class="mintemp">
+                    <p id="mintemp" class="value"></p><span>&#x2103</span>
+                </div>
+                <p>Max. Hőm.</p>
+                <div class="maxtemp">
+                    <p id="maxtemp" class="value"></p><span>&#x2103</span>
+                </div>
+            </div>
+            <div class="humpress">
+                <p>Páratartalom</p>
+                <div class="humidity">
+                    <p id="humidity" class="value"></p><span>%</span>
+                </div>
+                <p>Légnyomás</p>
+                <div class="pressure">
+                    <p id="pressure" class="value"></p><span>hPa</span>
+                </div>
+            </div>
+        </div>
+        <div class="thirddata">
+            <div class="sunmove">
+                <p>Napkelte</p>
+                <p id="sunrise" class="value"></p>
+                <p>Napnyugta</p>
+                <p id="sunset" class="value"></p>
+            </div>
+            <div class="moon">
+                <p>Holdkelte</p>
+                <p id ="moonrise" class="value"></p>
+                <p>Holdnyugta</p>
+                <p id="moonset" class="value"></p>
+            </div>
+
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

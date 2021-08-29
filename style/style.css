@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: dodgerblue;
+}
+
+.rainy {
+  background: url("../images/waterrainglass1.jpg");
+  color: azure;
+}
+.sunshine {
+  background: url("../images/sunshine.jpg");
+  color: azure;
+}
+.thunderstorm {
+  background: url("../images/thunderstorm.jpg");
+  color: rgb(255, 255, 255);
+}
+.drizzle {
+  background: url("../images/drizzle.jpg");
+  color: azure;
+}
+.snow {
+  background: url("../images/snow.jpg");
+  color: azure;
+}
+.cloudy {
+  background: url("../images/cloudy.jpg");
+  color: azure;
+}
+.mist {
+  background: url("../images/fog.jpg");
+  color: rgb(255, 255, 255);
+}
+.night {
+  background: url("../images/nignt.jpg");
+}
+
+.container {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 30px 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60vh;
+  box-shadow: 2px 2px 10px black;
+  text-shadow: 4px 4px 10px black;
+}
+.container p {
+  font-size: 1.3rem;
+}
+.container .head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px;
+}
+.container .head .city {
+  font-size: 2rem;
+  align-items: center;
+}
+.main_temp,
+.mintemp,
+.maxtemp,
+.humidity,
+.pressure {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+.container .head .temperatures {
+  font-size: 7.5rem;
+  font-weight: bold;
+  margin: -15px 0 -10px 0;
+}
+.container .head .clouds {
+  font-size: 1.5rem;
+}
+.container .head i {
+  font-size: 5rem;
+  margin-top: 20px;
+}
+
+.container .secdata {
+  display: flex;
+  font-size: 3rem;
+  width: 90%;
+  justify-content: space-around;
+  text-align: center;
+  border: 1px solid rgba(240, 255, 255, 0.322);
+  margin-bottom: 10px;
+  padding-top: 15px;
+}
+.container .value {
+  font-size: 2.5rem;
+  padding-bottom: 15px;
+}
+.container span {
+  font-size: 1.8rem;
+  padding-bottom: 15px;
+}
+.container .head span {
+  font-size: 7rem;
+  margin: -15px 0 -10px 0;
+}
+
+.container .thirddata {
+  display: flex;
+  font-size: 3rem;
+  width: 90%;
+  justify-content: space-around;
+  text-align: center;
+  border: 1px solid rgba(240, 255, 255, 0.322);
+  padding-top: 15px;
+  margin-bottom: 2rem;
+}
